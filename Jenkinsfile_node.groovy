@@ -6,12 +6,12 @@
 node {
 
     // jenkins workspace
-    def PROJECT_PATH="/root/.jenkins/workspace/springcloudFeign"
+    def PROJECT_PATH="/root/.jenkins/workspace/mypipline"
 
 
     // config git
     stage('获取代码') {
-        git credentialsId: 'e60e6c1f-244d-45c9-95b4-b7ddffa55384', url: 'http://172.20.4.39/bitauto/springcloudfeign.git'
+        git credentialsId: 'e60e6c1f-244d-45c9-95b4-b7ddffa55384', url: 'http://172.16.0.88:8000/root/test.git'
     }
 
     stage('代码构建+代码检查') {
